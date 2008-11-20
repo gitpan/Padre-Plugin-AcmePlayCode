@@ -3,9 +3,7 @@ package Padre::Plugin::AcmePlayCode;
 use warnings;
 use strict;
 
-our $VERSION = '0.02';
-
-use Acme::PlayCode;
+our $VERSION = '0.04';
 
 my @menu = (
     ['Averything',        \&averythig],
@@ -23,6 +21,7 @@ sub menu {
 sub _play {
 	my ( $self, $plugin ) = @_;
 	
+	require Acme::PlayCode;
     my $playapp = new Acme::PlayCode;	
 	$playapp->load_plugin( $plugin );
 	
@@ -36,7 +35,7 @@ sub _play {
 		$code = $doc->text_get;
 	}
 	
-	return unless ( defined $doc and length($doc) );
+	return unless ( defined $code and length($code) );
 	
 	my $played = $playapp->play($code);
 	
