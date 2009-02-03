@@ -1,14 +1,12 @@
 ---
 name: Padre-Plugin-AcmePlayCode
-version: 0.07
+version: 0.08
 author:
   - 'Fayland Lam <fayland@gmail.com>'
 abstract: 'L<Acme::PlayCode> Plugin for L<Padre>'
 license: perl
 resources:
   license: http://dev.perl.org/licenses/
-configure_requires:
-  Padre::PluginBuilder: 0.12
 requires:
   Acme::PlayCode: 0
   Padre: 0.26
@@ -17,7 +15,7 @@ build_requires:
 provides:
   Padre::Plugin::AcmePlayCode:
     file: lib/Padre/Plugin/AcmePlayCode.pm
-    version: 0.07
+    version: 0.08
 generated_by: Module::Build version 0.31
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html
